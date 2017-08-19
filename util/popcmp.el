@@ -90,7 +90,7 @@
                      (message "popcmd-popup style can't be used in terminal mode")
                      (setq val 'emacs-default)))
     ('company-mode (unless (fboundp 'company-mode)
-                     (require 'company-mode nil t))
+                     (require 'company nil t))
                    (unless (fboundp 'company-mode)
                      (run-with-idle-timer 1 nil 'popcmp-cant-use-style val)
                      (setq val 'popcmp-popup)))
